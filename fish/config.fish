@@ -1,6 +1,8 @@
 set fish_greeting
 set -U fish_prompt_pwd_dir_length 0
 
+abbr -a dc docker compose
+
 function fish_prompt
     # Parse git branch
     set -l git_branch (git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
@@ -21,3 +23,5 @@ function fish_prompt
     echo -e "🎅 $user$at$host$colon$cwd $git_part on $timestamp 🎄"
     echo -n " => "
 end
+
+zoxide init fish | source
