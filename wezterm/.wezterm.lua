@@ -13,6 +13,14 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.default_domain = "WSL:Ubuntu"
 
+config.wsl_domains = {
+	{
+		name = "WSL:Ubuntu",
+		distribution = "Ubuntu",
+		default_cwd = "~",
+	},
+}
+
 config.automatically_reload_config = true
 
 config.window_close_confirmation = "NeverPrompt"
