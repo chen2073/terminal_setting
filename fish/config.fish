@@ -1,6 +1,14 @@
 set fish_greeting
 set -U fish_prompt_pwd_dir_length 0
 
+while read -l line
+    # Skip comments and empty lines
+    if string match -qr '^[^#]' -- "$line"
+        set -l parts (string split -m 1 '=' -- "$line")
+        set -gx $parts[1] $parts[2]
+    end
+end < ~/.env
+
 abbr -a dc docker compose
 
 function fish_prompt
