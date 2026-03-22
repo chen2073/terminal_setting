@@ -4,7 +4,3 @@ font-feature = -calt, -liga, -dlig
 cursor-style = block
 cursor-style-blink = true
 quick-terminal-position = center
-maximize = true
-command = /opt/homebrew/bin/bash
-custom-shader = shaders/cursor_tail.glsl
-custom-shader = shaders/sonic_boom_cursor.glsl
